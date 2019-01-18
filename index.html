@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Time Sheet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="container"> 
+            <div class="jumbotron">
+                <h1 class="display-4 text-center" >Employee Data Management</h1>
+                <h2 class=" text-center">A Comprehensive Directory of Employee Billable Hours </h2>
+            </div>
+            
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col"> Employee Name</th>
+                        <th scope="col"> Role </th>
+                        <th scope="col"> Start Date </th>
+                        <th scope="col"> Months Worked </th>
+                        <th scope="col"> Monthly Rate ($) </th>
+                        <th scope="col"> Total Billed ($) </th>
+                    </tr>
+                </thead>
+                <tbody id="employees">
+
+                </tbody>
+            </table>
+
+            <div class = "card">
+                <div class="card-body">
+                <h3 class="card-title">Add Employee</h3>
+                <form role = "form">
+                    <div class = "form-group">
+                        <label for = "name-input">Employee Name</label>
+                        <input class = "form-control" id = "name-input" type = "text" placeholder = "Mike Wazowski"/>
+                    </div>
+                    <div class = "form-group">
+                        <label for = "role-input">Role</label>
+                        <input class = "form-control" id = "role-input" type = "text" placeholder = "CEO"/>
+                    </div> 
+                    <div class = "form-group">
+                        <label for = "date-input">Start Date (MM/DD/YYYY)</label>
+                        <input class = "form-control" id = "date-input" type = "text" placeholder = "01/17/2017"/>
+                    </div> 
+                    <div class = "form-group">
+                        <label for = "rate-input">Monthly Rate</label>
+                        <input class = "form-control" id = "rate-input" type = "text" placeholder = "50000"/>
+                    </div> 
+                    <button class = "btn btn-default" id = "add-employee" type = "submit">Submit</button>
+            
+                </form>
+                </div>
+            </div>
+    </div>
+
+    
+
+    
+</body>
+</html>
