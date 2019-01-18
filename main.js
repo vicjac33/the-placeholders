@@ -42,11 +42,15 @@ $(document).ready(function() {
     var nameTh = $("<th>").attr("scope", "row").text(sv.name);
     var roleTd = $("<td>").text(sv.role);
     var startDateTd = $("<td>").text(sv.startDate);
-    var monthsWorkedTd = $("<td>");
+    var monthsWorked = moment.duration(moment().diff(moment(sv.startDate, "MM/DD/YYYY"))).asMonths();
+
+    var monthsWorkedTd = $("<td>").text(parseInt(monthsWorked));
     var monthlyRateTd = $("<td>").text(sv.monthlyRate);
     var totalBilledTd = $("<td>");
 
     var tr = $("<tr>").append(nameTh, roleTd, startDateTd, monthsWorkedTd, monthlyRateTd, totalBilledTd);
     $("#employees").append(tr);
+
   });
 });
+
